@@ -388,5 +388,495 @@
         "Высота кулера": "161 мм"
       }
     }
+  ],
+  "orders": [
+    {
+      "telephone": "72342342543",
+      "email": "asas@gmail.com",
+      "address": "fsdafdsdfsdfsdf",
+      "build": {
+        "videocards": {
+          "id": 1,
+          "typeTitle": "Видеокарта",
+          "title": "Видеокарта Gigabyte GeForce RTX 3060 Ti EAGLE 8GB",
+          "date": "13.03.2020",
+          "price": "47 600 р",
+          "image": "images/3060.jpg",
+          "properties": {
+            "Ядро": "1410 МГц",
+            "Объем видеопамяти": "8 ГБ",
+            "Память": "GDDR6",
+            "Длина": "242 мм"
+          }
+        },
+        "ram": {
+          "id": 1,
+          "typeTitle": "Оперативка",
+          "title": "Оперативная память 16Gb 2666MHz Kingston HyperX Fury",
+          "date": "13.03.2020",
+          "price": "7 450 р",
+          "image": "images/fury.jpg",
+          "properties": {
+            "Тип памяти": "DDR4",
+            "Объем видеопамяти": "2x8 ГБ",
+            "Тайминги": "16-18-18-35",
+            "Высота": "42 мм"
+          }
+        },
+        "mothercard": {
+          "id": 1,
+          "typeTitle": "Материнка",
+          "title": "Материнская плата ASUS TUF GAMING B460M-PLUS",
+          "date": "21.09.2020",
+          "price": "12 490 р",
+          "image": "images/b460.jpg",
+          "properties": {
+            "Socket": "LGA 1200",
+            "Чипсет": "B460",
+            "Тип памяти": "DDR4",
+            "Количество слотов памяти": "4",
+            "Частота памяти": "2133-2933 МГц"
+          }
+        },
+        "cooler": {
+          "id": 1,
+          "typeTitle": "Охлаждение",
+          "title": "Охлаждение Thermalright Le Grand Macho RT",
+          "date": "16.06.2020",
+          "price": "3 490 р",
+          "image": "images/macho.jpg",
+          "properties": {
+            "Socket": "LGA 775, LGA 1150, LGA 1151, LGA 1155, LGA 1156, LGA 1356, LGA 1366, LGA 2011, LGA 2011-3, AM2, AM2+, AM3, AM3+, FM1, FM2, FM2+",
+            "Скорость вращения": "300-1300 об/мин",
+            "Система охлаждения": "активная",
+            "Высота": "159 мм"
+          }
+        },
+        "hdd": {
+          "id": 2,
+          "typeTitle": "Жесткий",
+          "title": "Твердотельный накопитель SSD 960Gb Kingston A400",
+          "date": "16.06.2020",
+          "price": "5 275 р",
+          "image": "images/king.jpg",
+          "properties": {
+            "Интерфейс": "SATA-III",
+            "Объём накопителя": "960 Гб",
+            "Скорость чтения": "500 Мб/сек",
+            "Скорость записи": "450 Мб/сек",
+            "Тип": "SSD"
+          }
+        },
+        "power": {
+          "id": 1,
+          "typeTitle": "Блок",
+          "title": "Блок питания Thermaltake Toughpower GF2 ARGB",
+          "date": "24.11.2020",
+          "price": "13 080 р",
+          "image": "images/GF2.jpg",
+          "properties": {
+            "Мощность": "650 Вт",
+            "Система охлаждения": "активный PFC",
+            "Вентилятор": "140 мм",
+            "Защита от перегрузки": "Да"
+          }
+        },
+        "corpus": {
+          "id": 1,
+          "typeTitle": "Корпус",
+          "title": "Корпус Zalman i3 Edge Black",
+          "date": "21.09.2020",
+          "price": "4 200 р",
+          "image": "images/edge.jpg",
+          "properties": {
+            "Форм-фактор": "ATX, mATX, Mini-ITX",
+            "Типоразмер": "Midi-Tower",
+            "Длина видеокарты": "360 мм",
+            "Высота кулера": "172 мм"
+          }
+        },
+        "processors": {
+          "id": 1,
+          "typeTitle": "Процессор",
+          "title": "Процессор Intel i3 10100F",
+          "date": "05.02.2023",
+          "price": "11",
+          "image": "images/i3.jpg",
+          "count": 12,
+          "properties": {
+            "Socket": "LGA 1200",
+            "Тактовая частота": "3600",
+            "Количество ядер": "4"
+          }
+        }
+      },
+      "id": 2
+    },
+    {
+      "telephone": "74234234234",
+      "email": "asas@gmail.com",
+      "address": "fdsfsdfsdfsdfsdf",
+      "build": {
+        "videocards": {
+          "id": 1,
+          "typeTitle": "Видеокарта",
+          "title": "Видеокарта Gigabyte GeForce RTX 3060 Ti EAGLE 8GB",
+          "date": "13.03.2020",
+          "price": "47 600 р",
+          "image": "images/3060.jpg",
+          "properties": {
+            "Ядро": "1410 МГц",
+            "Объем видеопамяти": "8 ГБ",
+            "Память": "GDDR6",
+            "Длина": "242 мм"
+          }
+        },
+        "ram": {
+          "id": 1,
+          "typeTitle": "Оперативка",
+          "title": "Оперативная память 16Gb 2666MHz Kingston HyperX Fury",
+          "date": "13.03.2020",
+          "price": "7 450 р",
+          "image": "images/fury.jpg",
+          "properties": {
+            "Тип памяти": "DDR4",
+            "Объем видеопамяти": "2x8 ГБ",
+            "Тайминги": "16-18-18-35",
+            "Высота": "42 мм"
+          }
+        },
+        "mothercard": {
+          "id": 1,
+          "typeTitle": "Материнка",
+          "title": "Материнская плата ASUS TUF GAMING B460M-PLUS",
+          "date": "21.09.2020",
+          "price": "12 490 р",
+          "image": "images/b460.jpg",
+          "properties": {
+            "Socket": "LGA 1200",
+            "Чипсет": "B460",
+            "Тип памяти": "DDR4",
+            "Количество слотов памяти": "4",
+            "Частота памяти": "2133-2933 МГц"
+          }
+        },
+        "cooler": {
+          "id": 1,
+          "typeTitle": "Охлаждение",
+          "title": "Охлаждение Thermalright Le Grand Macho RT",
+          "date": "16.06.2020",
+          "price": "3 490 р",
+          "image": "images/macho.jpg",
+          "properties": {
+            "Socket": "LGA 775, LGA 1150, LGA 1151, LGA 1155, LGA 1156, LGA 1356, LGA 1366, LGA 2011, LGA 2011-3, AM2, AM2+, AM3, AM3+, FM1, FM2, FM2+",
+            "Скорость вращения": "300-1300 об/мин",
+            "Система охлаждения": "активная",
+            "Высота": "159 мм"
+          }
+        },
+        "hdd": {
+          "id": 2,
+          "typeTitle": "Жесткий",
+          "title": "Твердотельный накопитель SSD 960Gb Kingston A400",
+          "date": "16.06.2020",
+          "price": "5 275 р",
+          "image": "images/king.jpg",
+          "properties": {
+            "Интерфейс": "SATA-III",
+            "Объём накопителя": "960 Гб",
+            "Скорость чтения": "500 Мб/сек",
+            "Скорость записи": "450 Мб/сек",
+            "Тип": "SSD"
+          }
+        },
+        "power": {
+          "id": 1,
+          "typeTitle": "Блок",
+          "title": "Блок питания Thermaltake Toughpower GF2 ARGB",
+          "date": "24.11.2020",
+          "price": "13 080 р",
+          "image": "images/GF2.jpg",
+          "properties": {
+            "Мощность": "650 Вт",
+            "Система охлаждения": "активный PFC",
+            "Вентилятор": "140 мм",
+            "Защита от перегрузки": "Да"
+          }
+        },
+        "corpus": {
+          "id": 1,
+          "typeTitle": "Корпус",
+          "title": "Корпус Zalman i3 Edge Black",
+          "date": "21.09.2020",
+          "price": "4 200 р",
+          "image": "images/edge.jpg",
+          "properties": {
+            "Форм-фактор": "ATX, mATX, Mini-ITX",
+            "Типоразмер": "Midi-Tower",
+            "Длина видеокарты": "360 мм",
+            "Высота кулера": "172 мм"
+          }
+        },
+        "processors": {
+          "id": 1,
+          "typeTitle": "Процессор",
+          "title": "Процессор Intel i3 10100F",
+          "date": "05.02.2023",
+          "price": "11",
+          "image": "images/i3.jpg",
+          "count": 12,
+          "properties": {
+            "Socket": "LGA 1200",
+            "Тактовая частота": "3600",
+            "Количество ядер": "4"
+          }
+        }
+      },
+      "id": 3
+    },
+    {
+      "telephone": "75235235235",
+      "email": "sdfsdfsdf@gmail.com",
+      "address": "1`2123123123123",
+      "build": {
+        "videocards": {
+          "id": 1,
+          "typeTitle": "Видеокарта",
+          "title": "Видеокарта Gigabyte GeForce RTX 3060 Ti EAGLE 8GB",
+          "date": "13.03.2020",
+          "price": "47 600 р",
+          "image": "images/3060.jpg",
+          "properties": {
+            "Ядро": "1410 МГц",
+            "Объем видеопамяти": "8 ГБ",
+            "Память": "GDDR6",
+            "Длина": "242 мм"
+          }
+        },
+        "ram": {
+          "id": 1,
+          "typeTitle": "Оперативка",
+          "title": "Оперативная память 16Gb 2666MHz Kingston HyperX Fury",
+          "date": "13.03.2020",
+          "price": "7 450 р",
+          "image": "images/fury.jpg",
+          "properties": {
+            "Тип памяти": "DDR4",
+            "Объем видеопамяти": "2x8 ГБ",
+            "Тайминги": "16-18-18-35",
+            "Высота": "42 мм"
+          }
+        },
+        "mothercard": {
+          "id": 1,
+          "typeTitle": "Материнка",
+          "title": "Материнская плата ASUS TUF GAMING B460M-PLUS",
+          "date": "21.09.2020",
+          "price": "12 490 р",
+          "image": "images/b460.jpg",
+          "properties": {
+            "Socket": "LGA 1200",
+            "Чипсет": "B460",
+            "Тип памяти": "DDR4",
+            "Количество слотов памяти": "4",
+            "Частота памяти": "2133-2933 МГц"
+          }
+        },
+        "cooler": {
+          "id": 1,
+          "typeTitle": "Охлаждение",
+          "title": "Охлаждение Thermalright Le Grand Macho RT",
+          "date": "16.06.2020",
+          "price": "3 490 р",
+          "image": "images/macho.jpg",
+          "properties": {
+            "Socket": "LGA 775, LGA 1150, LGA 1151, LGA 1155, LGA 1156, LGA 1356, LGA 1366, LGA 2011, LGA 2011-3, AM2, AM2+, AM3, AM3+, FM1, FM2, FM2+",
+            "Скорость вращения": "300-1300 об/мин",
+            "Система охлаждения": "активная",
+            "Высота": "159 мм"
+          }
+        },
+        "hdd": {
+          "id": 2,
+          "typeTitle": "Жесткий",
+          "title": "Твердотельный накопитель SSD 960Gb Kingston A400",
+          "date": "16.06.2020",
+          "price": "5 275 р",
+          "image": "images/king.jpg",
+          "properties": {
+            "Интерфейс": "SATA-III",
+            "Объём накопителя": "960 Гб",
+            "Скорость чтения": "500 Мб/сек",
+            "Скорость записи": "450 Мб/сек",
+            "Тип": "SSD"
+          }
+        },
+        "power": {
+          "id": 1,
+          "typeTitle": "Блок",
+          "title": "Блок питания Thermaltake Toughpower GF2 ARGB",
+          "date": "24.11.2020",
+          "price": "13 080 р",
+          "image": "images/GF2.jpg",
+          "properties": {
+            "Мощность": "650 Вт",
+            "Система охлаждения": "активный PFC",
+            "Вентилятор": "140 мм",
+            "Защита от перегрузки": "Да"
+          }
+        },
+        "corpus": {
+          "id": 1,
+          "typeTitle": "Корпус",
+          "title": "Корпус Zalman i3 Edge Black",
+          "date": "21.09.2020",
+          "price": "4 200 р",
+          "image": "images/edge.jpg",
+          "properties": {
+            "Форм-фактор": "ATX, mATX, Mini-ITX",
+            "Типоразмер": "Midi-Tower",
+            "Длина видеокарты": "360 мм",
+            "Высота кулера": "172 мм"
+          }
+        },
+        "processors": {
+          "id": 1,
+          "typeTitle": "Процессор",
+          "title": "Процессор Intel i3 10100F",
+          "date": "05.02.2023",
+          "price": "11",
+          "image": "images/i3.jpg",
+          "count": 12,
+          "properties": {
+            "Socket": "LGA 1200",
+            "Тактовая частота": "3600",
+            "Количество ядер": "4"
+          }
+        }
+      },
+      "id": 4
+    },
+    {
+      "telephone": "73454353453",
+      "email": "asdasd@gmail.com",
+      "address": "1212121212",
+      "build": {
+        "videocards": {
+          "id": 1,
+          "typeTitle": "Видеокарта",
+          "title": "Видеокарта Gigabyte GeForce RTX 3060 Ti EAGLE 8GB",
+          "date": "13.03.2020",
+          "price": "47 600 р",
+          "image": "images/3060.jpg",
+          "properties": {
+            "Ядро": "1410 МГц",
+            "Объем видеопамяти": "8 ГБ",
+            "Память": "GDDR6",
+            "Длина": "242 мм"
+          }
+        },
+        "ram": {
+          "id": 1,
+          "typeTitle": "Оперативка",
+          "title": "Оперативная память 16Gb 2666MHz Kingston HyperX Fury",
+          "date": "13.03.2020",
+          "price": "7 450 р",
+          "image": "images/fury.jpg",
+          "properties": {
+            "Тип памяти": "DDR4",
+            "Объем видеопамяти": "2x8 ГБ",
+            "Тайминги": "16-18-18-35",
+            "Высота": "42 мм"
+          }
+        },
+        "mothercard": {
+          "id": 1,
+          "typeTitle": "Материнка",
+          "title": "Материнская плата ASUS TUF GAMING B460M-PLUS",
+          "date": "21.09.2020",
+          "price": "12 490 р",
+          "image": "images/b460.jpg",
+          "properties": {
+            "Socket": "LGA 1200",
+            "Чипсет": "B460",
+            "Тип памяти": "DDR4",
+            "Количество слотов памяти": "4",
+            "Частота памяти": "2133-2933 МГц"
+          }
+        },
+        "cooler": {
+          "id": 1,
+          "typeTitle": "Охлаждение",
+          "title": "Охлаждение Thermalright Le Grand Macho RT",
+          "date": "16.06.2020",
+          "price": "3 490 р",
+          "image": "images/macho.jpg",
+          "properties": {
+            "Socket": "LGA 775, LGA 1150, LGA 1151, LGA 1155, LGA 1156, LGA 1356, LGA 1366, LGA 2011, LGA 2011-3, AM2, AM2+, AM3, AM3+, FM1, FM2, FM2+",
+            "Скорость вращения": "300-1300 об/мин",
+            "Система охлаждения": "активная",
+            "Высота": "159 мм"
+          }
+        },
+        "hdd": {
+          "id": 2,
+          "typeTitle": "Жесткий",
+          "title": "Твердотельный накопитель SSD 960Gb Kingston A400",
+          "date": "16.06.2020",
+          "price": "5 275 р",
+          "image": "images/king.jpg",
+          "properties": {
+            "Интерфейс": "SATA-III",
+            "Объём накопителя": "960 Гб",
+            "Скорость чтения": "500 Мб/сек",
+            "Скорость записи": "450 Мб/сек",
+            "Тип": "SSD"
+          }
+        },
+        "power": {
+          "id": 1,
+          "typeTitle": "Блок",
+          "title": "Блок питания Thermaltake Toughpower GF2 ARGB",
+          "date": "24.11.2020",
+          "price": "13 080 р",
+          "image": "images/GF2.jpg",
+          "properties": {
+            "Мощность": "650 Вт",
+            "Система охлаждения": "активный PFC",
+            "Вентилятор": "140 мм",
+            "Защита от перегрузки": "Да"
+          }
+        },
+        "corpus": {
+          "id": 1,
+          "typeTitle": "Корпус",
+          "title": "Корпус Zalman i3 Edge Black",
+          "date": "21.09.2020",
+          "price": "4 200 р",
+          "image": "images/edge.jpg",
+          "properties": {
+            "Форм-фактор": "ATX, mATX, Mini-ITX",
+            "Типоразмер": "Midi-Tower",
+            "Длина видеокарты": "360 мм",
+            "Высота кулера": "172 мм"
+          }
+        },
+        "processors": {
+          "id": 1,
+          "typeTitle": "Процессор",
+          "title": "Процессор Intel i3 10100F",
+          "date": "05.02.2023",
+          "price": "11",
+          "image": "images/i3.jpg",
+          "count": 12,
+          "properties": {
+            "Socket": "LGA 1200",
+            "Тактовая частота": "3600",
+            "Количество ядер": "4"
+          }
+        }
+      },
+      "id": 5
+    }
   ]
 }

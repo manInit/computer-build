@@ -5,7 +5,8 @@
 }
 
 table {
-  margin: 20px auto;
+  margin-top: 20px;
+  width: 100%;
   box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
 }
 

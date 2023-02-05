@@ -3,13 +3,15 @@ import './report.css';
 function ReportPage() {
   return (
     <>
-      <h2 className="text-center mt-3">Просмотр результатов поступления</h2>
-      <div className="wrapper d-flex w-50 align-items-center" style={{height: '40px'}}>
-        <p style={{width: '270px'}} className="m-0">Дата поступления:</p>
+      <h2 className="text-center mt-3">Отчет по продажам</h2>
+      <div className="wrapper bg-white d-flex w-50 align-items-center" style={{height: '40px'}}>
+        <p style={{width: '270px'}} className="m-0">Период:</p>
+        <input type="date" className="form-control mx-3" placeholder="Дата" />
+        -
         <input type="date" className="form-control mx-3" placeholder="Дата" />
         <button className="btn btn-primary" style={{width: '300px'}}>Отчет</button>
       </div>
-      <div>
+      <div className='w-50 mx-auto'>
         <table>
           <thead>
             <tr>

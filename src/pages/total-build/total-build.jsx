@@ -1,28 +1,86 @@
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import Modal from 'react-bootstrap/Modal';
-import Button from 'react-bootstrap/Button';
+import Modal from 'react-bootstrap/Modal'
+import Button from 'react-bootstrap/Button'
 import { cartStateSubject } from '../../cart-state/cart-state'
+import PhoneInput from 'react-phone-input-2'
+import 'react-phone-input-2/lib/style.css'
+import './total-build.css'
+import showNotification from '../../components/notification/notification'
+
+const reg = /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
+
 function TotalBuildPage() {
-  const cartState = cartStateSubject.value;
-  const summarySum = Object.values(cartState).reduce((sum, c) => 
+  const navigate = useNavigate()
+
+  const cartState = cartStateSubject.value
+  const summarySum = Object.values(cartState).reduce((sum, c) =>
     sum + parseInt(c.price.replace(' ', '')),
-  0);
+    0)
+
+  const [phoneInput, setPhoneInput] = useState('')
+  const [phoneErrorInput, setPhoneErrorInput] = useState(false)
+  const [emailInput, setEmailInput] = useState('')
+  const [emailErrorInput, setErrorEmailInput] = useState(false)
+  const [addressInput, setAddressInput] = useState('')
+  const [addressErrorInput, setAddressErrorInput] = useState(false)
+
+  const validateForm = () => {
+    const isPhoneError = phoneInput.length < 11
+    const isEmailError = !reg.test(emailInput)
+    const isAddressError = addressInput.length < 10
+    setPhoneErrorInput(isPhoneError)
+    setErrorEmailInput(isEmailError)
+    setAddressErrorInput(isAddressError)
+    return isPhoneError || isEmailError || isAddressError
+  }
+
+  const submitForm = () => {
+    const isError = validateForm()
+    if (isError) {
+      return
+    }
+
+    const build = cartStateSubject.value
+
+    const formData = {
+      telephone: phoneInput,
+      email: emailInput,
+      address: addressInput,
+      build
+    }
+
+    fetch('http://localhost:3004/orders', {
+      method: 'POST',
+      headers: {
+        'Content-type': 'Application/json'
+      },
+      body: JSON.stringify(formData)
+    }).then(() => {
+      handleClose()
+      setPhoneInput('')
+      setEmailInput('')
+      setAddressInput('')
+
+      cartStateSubject.next({})
+      
+      navigate('/orders')
+   });
+  }
 
 
-  const navigate = useNavigate();
-  const [show, setShow] = useState(false);
+  const [show, setShow] = useState(false)
 
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
+  const handleClose = () => setShow(false)
+  const handleShow = () => setShow(true)
 
   const handleBackClick = () => {
-    navigate('/');
+    navigate('/')
   }
 
   return (
     <div className='container  w-50'>
-       <h2 className="text-center mt-3">Ваша конфигурация</h2>
+      <h2 className="text-center mt-3">Ваша конфигурация</h2>
       <table className="table table-striped" >
         <tbody>
           {Object.values(cartState).map((c) => (
@@ -45,23 +103,51 @@ function TotalBuildPage() {
         <Modal.Body>
           <div className="mb-3">
             <label htmlFor="exampleInputPassword1" className="form-label">Телефон</label>
-            <input type="tel" className="form-control" id="exampleInputPassword1"/>
+            <PhoneInput
+              className={phoneErrorInput ? 'form-control is-invalid' : 'form-control'}
+              country={'ru'}
+              value={phoneInput}
+              onChange={setPhoneInput}
+            />
+            {phoneErrorInput && (
+              <small className="text-danger">
+                Введите полный номер телефона
+              </small>
+            )}
           </div>
           <div className="mb-3">
             <label htmlFor="exampleInputPassword1" className="form-label">Email</label>
-            <input type="email" className="form-control" id="exampleInputPassword1"/>
+            <input
+              className={emailErrorInput ? 'form-control is-invalid' : 'form-control'}
+              type="email"
+              onChange={e => setEmailInput(e.target.value)}
+              value={emailInput}
+              id="exampleInputPassword1" />
+            {emailErrorInput && (
+              <small className="text-danger">
+                Введите коррекнтую электронную почту
+              </small>
+            )}
           </div>
           <div className="mb-3">
             <label htmlFor="exampleInputPassword1" className="form-label">Адрес доставки</label>
-            <input type="text" className="form-control" id="exampleInputPassword1"/>
+            <input
+              onChange={e => setAddressInput(e.target.value)}
+              value={addressInput}
+              type="text" className={addressErrorInput ? 'form-control is-invalid' : 'form-control'} id="exampleInputPassword1" />
+            {addressErrorInput && (
+              <small className="text-danger">
+                Введите полный адрес доставки
+              </small>
+            )}
           </div>
         </Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={handleClose}>
             Закрыть
           </Button>
-          <Button variant="primary" onClick={handleClose}>
-            Добавить
+          <Button variant="primary" onClick={submitForm}>
+            Заказать
           </Button>
         </Modal.Footer>
       </Modal>
@@ -69,4 +155,4 @@ function TotalBuildPage() {
   )
 }
 
-export default TotalBuildPage;
+export default TotalBuildPage

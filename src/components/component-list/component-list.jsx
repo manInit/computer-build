@@ -1,16 +1,6 @@
-import { useEffect } from 'react'
-import { useState } from 'react'
 import CardComponent from '../card-component/card-component'
 
-function ComponentList() {
-  const [components, setComponents] = useState([]);
-
-  useEffect(() => {
-    fetch('http://localhost:3004/components')
-      .then(res => res.json())
-      .then((data) => setComponents(data))
-  }, [])
-  
+function ComponentList({components = []}) {
   return (
     <div>
       {components.map((c) => (

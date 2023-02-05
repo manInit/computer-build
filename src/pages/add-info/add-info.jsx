@@ -35,7 +35,6 @@ function AddInfoPage() {
 
   const submitForm = () => {
     const [type, id] = selectedComponent.split('@')
-    console.log(selectedComponent)
     const isError = validateForm()
     if (isError) {
       return
