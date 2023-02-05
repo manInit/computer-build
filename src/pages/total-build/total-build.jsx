@@ -6,7 +6,6 @@ import { cartStateSubject } from '../../cart-state/cart-state'
 import PhoneInput from 'react-phone-input-2'
 import 'react-phone-input-2/lib/style.css'
 import './total-build.css'
-import showNotification from '../../components/notification/notification'
 
 const reg = /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
 
@@ -47,6 +46,7 @@ function TotalBuildPage() {
       telephone: phoneInput,
       email: emailInput,
       address: addressInput,
+      date: new Date().toLocaleDateString(),
       build
     }
 
