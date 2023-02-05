@@ -15,7 +15,7 @@ function PriceSummary() {
       setPrice(sum)
     }
     // @HACK update length when add new type component
-    const COUNT_ALL_COMPONENTS = 2
+    const COUNT_ALL_COMPONENTS = 8
     const isDisabled = Object.keys(data).length !== COUNT_ALL_COMPONENTS
     if (isDisabled !== disabled) {
       setDisabled(isDisabled);

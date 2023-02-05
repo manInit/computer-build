@@ -89,9 +89,10 @@ function CardComponent({ title, description, image, type, id }) {
   return (
     <div className="card mb-3">
       <div className="row g-0">
-        <div className="col-md-4">
+        <div className="card-image col-md-4">
           <img style={{
-            maxWidth: '100%'
+            maxWidth: '100%',
+            maxHeight: '220px',
           }} src={imageCard} alt="processor" />
         </div>
         <div className="col-md-8">
@@ -118,33 +119,36 @@ function CardComponent({ title, description, image, type, id }) {
       </div>
       <Modal show={show} onHide={handleClose} dialogClassName="modal-90w" >
         <Modal.Header closeButton>
-          <Modal.Title>Выбор процессора</Modal.Title>
+          <Modal.Title>{title}</Modal.Title>
         </Modal.Header>
         <Modal.Body>
           <div className="container">
-            {listComponents.map(c => (
-              <div key={c.id} className="mt-3 mx-auto card mb-3" style={{ maxWidth: '540px' }}>
-                <div className="row g-0">
-                  <div className="col-md-4">
-                    <img src={c.image} className="img-fluid rounded-start" alt="" />
-                  </div>
-                  <div className="col-md-8">
-                    <div className="card-body">
-                      <h5 className="card-title">{c.title}</h5>
-                      <p className='fs-5' style={{ marginBottom: 0 }}>Цена: {c.price}</p>
+            {listComponents.map(c => (c.count > 0 && (
+               <div key={c.id} className="mt-3 mx-auto card mb-3" style={{ maxWidth: '100%' }}>
+               <div className="row g-0">
+                 <div className="col-md-4 card-image px-3">
+                   <img src={c.image} className="img-fluid rounded-start" alt="" />
+                 </div>
+                 <div className="col-md-8">
+                   <div className="card-body">
+                     <h5 className="card-title">{c.title}</h5>
+                     <p className='fs-5' style={{ marginBottom: 0 }}>Цена: {c.price}</p>
+                     <p style={{ marginBottom: 0 }}>Количество на складе: {c.count}</p>
 
-                      {Object.entries(c.properties).map(([key, value]) => (
-                        <p key={key} className="card-text" style={{ marginBottom: 0 }}>
-                          {key} : {value}
-                        </p>
-                      ))}
+                     {Object.entries(c.properties).map(([key, value]) => (
+                       <p key={key} className="card-text" style={{ marginBottom: 0 }}>
+                         {key} : {value}
+                       </p>
+                     ))}
 
-                      <p style={{ marginBottom: 0 }}>Дата поступления: {c.date}</p>
-                      <button onClick={() => handleChoose(c)} className="mt-2 btn btn-primary">Выбрать</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
+                     <p style={{ marginBottom: 0 }}>Дата поступления: {c.date}</p>
+                     <button onClick={() => handleChoose(c)} className="mt-2 btn btn-primary">Выбрать</button>
+                   </div>
+                 </div>
+               </div>
+             </div>
+            )
+             
             ))}
 
           </div>
