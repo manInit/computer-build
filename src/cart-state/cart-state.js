@@ -9,3 +9,12 @@ export const cartState$ = cartStateSubject
   .pipe(tap(state => {
     localStorage.setItem('cart', JSON.stringify(state))
   }));
+
+
+const prevLoginState = (localStorage.getItem('auth') || 'false');
+export const authStateSubject = new BehaviorSubject(prevLoginState);
+export const authState$ = authStateSubject
+  .asObservable()
+  .pipe(tap(state => {
+    localStorage.setItem('auth', state)
+}));

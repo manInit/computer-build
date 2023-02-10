@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import { formatPrice } from '../../utils/format-price'
 import './report.css'
 
 function ReportPage() {
@@ -89,7 +90,7 @@ function ReportPage() {
                   <td className='text-end'>{c.count}</td>
                   <td className='text-end'>{c.price}</td>
                   <td className='text-end'>
-                    {parseInt(c.price.replace(' ', '')) * c.count + ' р'}
+                    {formatPrice(parseInt(c.price.replace(' ', '')) * (c.count)) + ' р'}
                   </td>
                 </tr>
               ))
@@ -97,7 +98,7 @@ function ReportPage() {
           </tbody>
         </table>
 
-        <h4 className='mt-4'>Общая стоимость заказов: {totalSum} р</h4>
+        <h4 className='mt-4'>Общая стоимость заказов: {formatPrice(totalSum)} р</h4>
       </div>
     </>
   )

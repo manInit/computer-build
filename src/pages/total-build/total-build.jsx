@@ -6,6 +6,7 @@ import { cartStateSubject } from '../../cart-state/cart-state'
 import PhoneInput from 'react-phone-input-2'
 import 'react-phone-input-2/lib/style.css'
 import './total-build.css'
+import { formatPrice } from '../../utils/format-price'
 
 const reg = /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
 
@@ -91,7 +92,10 @@ function TotalBuildPage() {
           ))}
         </tbody>
       </table>
-      <p className='text-end fs-5'>Общая сумма вместе с сборкой: <span className='fw-bold fs-3'>{summarySum + 1000} р</span></p>
+      <p className='text-end fs-5'>Общая сумма вместе с сборкой: <span className='fw-bold fs-3'>
+        {formatPrice(summarySum + 1000)} р
+        </span>
+      </p>
       <div className='d-flex justify-content-end'>
         <button onClick={handleBackClick} className='btn btn-outline-secondary'>Продолжить выбор</button>
         <button onClick={handleShow} className='ms-3 btn btn-primary'>Купить компьютер</button>

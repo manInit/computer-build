@@ -1,5 +1,6 @@
 import './orders.css'
 import { useEffect, useState } from 'react'
+import { formatPrice } from '../../utils/format-price'
 
 function OrdersPage() {
   const [orders, setOrders] = useState([])
@@ -32,12 +33,14 @@ function OrdersPage() {
       <div className="row">
         <div className="col">
           <div className="container">
-            <h1 className='text-start'>Общая стоимость заказа: {totalSum} р</h1>
+            <h1 className='text-start'>Общая стоимость заказа: {formatPrice(totalSum)} р</h1>
             {orders.map(c => ((
               <div key={c.id} className="mt-3 mx-auto card mb-3" style={{ maxWidth: '100%' }}>
                 <div className="row g-0">
                   <div className="col-md-4 card-image px-3">
-                    <img src={c.image} className="img-fluid rounded-start" alt="" />
+                    <img src={c.image} className="img-fluid rounded-start" alt="" style={{
+                      maxHeight: '200px'
+                    }} />
                   </div>
                   <div className="col-md-8">
                     <div className="card-body">

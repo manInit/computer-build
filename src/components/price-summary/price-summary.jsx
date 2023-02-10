@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { cartState$ } from '../../cart-state/cart-state'
+import { formatPrice } from '../../utils/format-price'
 import './price-summary.css'
 
 function PriceSummary() {
@@ -45,11 +46,11 @@ function PriceSummary() {
       <div className='flex-grow-1 fs-5'>
         <p className='mb-0 d-flex alig'>
           <span className='text-secondary flex-grow-1 text-start'>Общая стоимость: </span>
-          <span className='fs-4'> {price} p</span>
+          <span className='fs-4'> {formatPrice(price)} p</span>
         </p>
         <p className='d-flex'>
           <span className='text-secondary flex-grow-1 text-start'>Стоимость сборки: </span>
-          <span className='fs-4'> {price === 0 ? '0' : price + 1000} p</span>
+          <span className='fs-4'> {formatPrice(price === 0 ? 0 : price + 1000)} p</span>
         </p>
       </div>
       <button onClick={handleClick} className='btn btn-primary w-100' disabled={disabled}>Собрать</button>
