@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom'
 import { authState$, authStateSubject, cartStateSubject } from '../../cart-state/cart-state';
 import './navbar.css';
+import logoimage from './logo.png'
 
 function Navbar() {
   const [isAdmin, setIsAdmin] = useState(authStateSubject.value === 'admin')
@@ -29,7 +30,10 @@ function Navbar() {
   return (
     <nav className="sticky-top navbar navbar-expand-lg bg-white">
       <div className="container-fluid">
-        <Link className="navbar-brand" to="/">Logo</Link>
+        <Link className="navbar-brand" to="/">
+          <img style = {{maxHeight: '50px'}} src = {logoimage}/>
+
+        </Link>
         {isAuth && (
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
         <ul className="navbar-nav w-100 me-auto mb-2 mb-lg-0">
